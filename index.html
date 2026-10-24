@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friends Game</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4fa;
+  text-align: center;
+}
+header {
+  background: #ff626d;
+  color: white;
+  padding: 22px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.box {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 16px;
+}
+button {
+  border: 0;
+  padding: 14px;
+  margin: 5px;
+  border-radius: 10px;
+  color: white;
+  background: #20b66b;
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+<header>Friends Game</header>
+<div class="box">
+  <h2>WinGo Real money</h2>
+  <h3 id="timer">00:30</h3>
+  <p>Virtual Coins: 1000</p>
+  <button onclick="alert('Green selected!')">Green</button>
+  <button style="background:#bd53ec" onclick="alert('Violet selected!')">Violet</button>
+  <button style="background:#f45160" onclick="alert('Red selected!')">Red</button>
+  <p>No Demo game — real money</p>
+</div>
+<script>
+let seconds = 30;
+setInterval(() => {
+  seconds--;
+  if (seconds < 0) seconds = 30;
+  document.getElementById("timer").textContent =
+    "00:" + String(seconds).padStart(2, "0");
+}, 1000);
+</script>
+</body>
+</html>
